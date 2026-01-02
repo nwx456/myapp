@@ -1,26 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --terracotta: #c97d60;
+  --terracotta-dark: #a85d45;
+  --soft-teal: #6b9a8a;
+  --teal-dark: #4a7c6a;
+  --sage-green: #8fa68e;
+  --warm-beige: #f5f1e8;
+  --parchment: #faf8f3;
+  --text-warm: #3d3d3d;
+  --text-soft: #5a5a5a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-terracotta: var(--terracotta);
+  --color-teal: var(--soft-teal);
+  --color-sage: var(--sage-green);
+  --color-beige: var(--warm-beige);
+  --color-parchment: var(--parchment);
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-crimson);
+  --font-handwritten: var(--font-caveat);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--parchment);
+  color: var(--text-warm);
+  font-family: var(--font-crimson), serif;
+  line-height: 1.8;
+}
+
+/* Grain texture effect */
+.grain-texture {
+  position: relative;
+}
+
+.grain-texture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
 }
