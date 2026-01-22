@@ -14,7 +14,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-white/70">
               <li><Link href="/oyunlarim" className="hover:text-white transition-colors">Marble 3D</Link></li>
               <li><Link href="/oyunlarim" className="hover:text-white transition-colors">Flappy Bird 3D</Link></li>
-              <li><Link href="/oyunlarim" className="hover:text-white transition-colors">Renkli Küpler</Link></li>
+              <li><Link href="/oyunlarim" className="hover:text-white transition-colors">Balance Tower 3D</Link></li>
               <li><Link href="/oyunlarim" className="hover:text-white transition-colors">Car Game</Link></li>
             </ul>
           </div>

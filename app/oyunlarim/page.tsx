@@ -28,7 +28,7 @@ export default function Oyunlarim() {
     },
     {
       id: 'balance-tower-3d',
-      name: 'Renkli Küpler',
+      name: 'Balance Tower 3D',
       description: 'Renkli küplere kafasını takmış bir çocuğun odasında yine renkli küplerle kule yaparak havalandırmadan kaçmaya çalışan bir karakter.',
       playLink: 'https://play.unity.com/en/games/00fae635-3b90-4d6f-ac81-4f82cc6c298a/balancetower',
       downloadLink: 'https://drive.google.com/file/d/1kRFEj-topMsVyMMaInysEdXZilCkWtsP/view',

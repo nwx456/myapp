@@ -16,7 +16,7 @@ export default function Home() {
           <div 
             className="absolute inset-0 z-0 opacity-30"
             style={{ 
-              backgroundImage: 'url(/images/arkaplan.png)', 
+              backgroundImage: 'url(/images/arkaplan.png?v=2)', 
               backgroundSize: 'cover', 
               backgroundPosition: 'center center', 
               backgroundRepeat: 'no-repeat',
@@ -166,7 +166,7 @@ export default function Home() {
                   className="text-2xl font-bold text-white mb-3 uppercase tracking-tight"
                   style={{ fontFamily: 'var(--font-oswald)', fontWeight: 700 }}
                 >
-                  Renkli Küpler
+                  Balance Tower 3D
                 </h3>
                 <p className="text-white/70 text-sm mb-6 leading-relaxed">
                   Renkli küplere kafasını takmış bir çocuğun odasında yine renkli küplerle kule yaparak 
