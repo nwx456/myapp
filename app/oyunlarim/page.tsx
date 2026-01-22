@@ -10,7 +10,7 @@ export default function Oyunlarim() {
       name: 'Marble 3D',
       description: 'Fizik bilgilerinizi tazeliyecek ve size beyin egzersizi yaptıracak harika bir 3D oyun. Oyunun içinde biri özel olmak üzere 6 top bulunmakta, ayrıca hepsi birbirinden eğlenceli ve sinir bozucu olan 25 bölüm mevcut. Siz bu oyunu bitirebilir misiniz? Öğrenmenin tek yolu oynamak!!!',
       playLink: 'https://play.unity.com/en/games/71fb7e8e-77a4-4e82-b5aa-022eca79aabb/marble3d',
-      downloadLink: 'https://play.unity.com/en/games/71fb7e8e-77a4-4e82-b5aa-022eca79aabb/marble3d',
+      downloadLink: 'https://drive.google.com/file/d/1XMSXYB9meoTmbfslsbA1QxeUrq1X9xYE/view?usp=drive_link',
       note: 'NOT: Eğer 25. bölüme kadar gelip sağ altta bulunan mesaj bölümünden bana ekran görüntüsü atarsanız bu beni çok mutlu eder, oyun hakkında görüşlerinizi merakla bekliyorum.',
       hasPlayButton: true,
       color: 'bg-[#c99d6a]',

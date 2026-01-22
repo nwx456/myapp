@@ -114,7 +114,7 @@ export default function Home() {
                   <a href="https://play.unity.com/en/games/71fb7e8e-77a4-4e82-b5aa-022eca79aabb/marble3d" target="_blank" rel="noopener noreferrer" className="flex-1 px-4 py-2.5 bg-[#DC2626] text-white font-semibold rounded-full hover:bg-[#B91C1C] transition-colors text-center text-xs uppercase tracking-wide">
                     Oyna
                   </a>
-                  <a href="https://play.unity.com/en/games/71fb7e8e-77a4-4e82-b5aa-022eca79aabb/marble3d" target="_blank" rel="noopener noreferrer" className="flex-1 px-4 py-2.5 bg-transparent border border-white/20 text-white font-semibold rounded-full hover:border-white/40 transition-colors text-center text-xs uppercase tracking-wide">
+                  <a href="https://drive.google.com/file/d/1XMSXYB9meoTmbfslsbA1QxeUrq1X9xYE/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex-1 px-4 py-2.5 bg-transparent border border-white/20 text-white font-semibold rounded-full hover:border-white/40 transition-colors text-center text-xs uppercase tracking-wide">
                     İndir
                   </a>
                 </div>
