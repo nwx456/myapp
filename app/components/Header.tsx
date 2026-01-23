@@ -23,6 +23,9 @@ export default function Header() {
             <Link href="/uygulamalarim" className={`hover:text-[#DC2626] transition-colors ${pathname === '/uygulamalarim' ? 'text-[#DC2626]' : 'text-white/70'}`}>
               Uygulamalarım
             </Link>
+            <Link href="/fotograflarim" className={`hover:text-[#DC2626] transition-colors ${pathname === '/fotograflarim' ? 'text-[#DC2626]' : 'text-white/70'}`}>
+              Fotoğraflarım
+            </Link>
             <Link href="/hakkimda" className={`hover:text-[#DC2626] transition-colors ${pathname === '/hakkimda' ? 'text-[#DC2626]' : 'text-white/70'}`}>
               Hakkımda
             </Link>
