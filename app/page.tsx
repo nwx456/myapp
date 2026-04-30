@@ -2,7 +2,6 @@
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import BackgroundIllustrations from './components/BackgroundIllustrations';
 
 export default function Home() {
   return (
@@ -54,10 +53,97 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#1A1A1A] to-transparent"></div>
         </section>
 
+        {/* Flagship project — dedicated monument block */}
+        <section
+          id="latest-project"
+          aria-label="Öne çıkan proje"
+          className="relative bg-[#0C0C0C] pt-28 pb-32 md:pt-36 md:pb-44 overflow-hidden"
+        >
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute top-1/3 left-[10%] w-[500px] h-[500px] rounded-full bg-[#DC2626]/[0.07] blur-[100px]" />
+            <div className="absolute bottom-0 right-0 w-[60%] h-64 bg-gradient-to-tl from-[#1A1A1A] to-transparent opacity-90" />
+            <div
+              className="absolute left-1/2 top-24 -translate-x-1/2 text-[clamp(4.5rem,22vw,18rem)] font-bold uppercase leading-none text-white/[0.04] whitespace-nowrap select-none"
+              style={{ fontFamily: 'var(--font-oswald)', fontWeight: 700, letterSpacing: '-0.04em' }}
+            >
+              BLUEBOOK
+            </div>
+          </div>
+
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-5xl mx-auto">
+              <div className="flex flex-col lg:flex-row lg:items-stretch gap-12 lg:gap-16">
+                <div className="hidden lg:block w-1.5 shrink-0 rounded-full bg-gradient-to-b from-[#DC2626] via-[#DC2626]/40 to-transparent opacity-90" aria-hidden />
+
+                <div className="flex-1 space-y-10">
+                  <div className="text-center lg:text-left space-y-4">
+                    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-[11px] md:text-xs uppercase tracking-[0.35em] text-white/45">
+                      <span className="inline-flex items-center gap-3">
+                        <span className="h-px w-10 bg-[#DC2626]" />
+                        My Latest Project
+                        <span className="h-px w-10 bg-[#DC2626]" />
+                      </span>
+                    </div>
+                    <div className="relative">
+                      <h2
+                        className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white uppercase tracking-tighter leading-[0.95]"
+                        style={{ fontFamily: 'var(--font-oswald)', fontWeight: 700, letterSpacing: '-0.02em' }}
+                      >
+                        Bluebook
+                        <span className="text-[#DC2626]"> Online</span>
+                      </h2>
+                      <p className="mt-4 text-sm md:text-base text-[#DC2626]/90 uppercase tracking-[0.2em] font-medium">
+                        AP sınav pratiği · Bluebook deneyimi · Ücretsiz
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="relative rounded-2xl md:rounded-3xl p-[1px] bg-gradient-to-br from-white/25 via-white/[0.06] to-white/[0.02] shadow-[0_0_80px_-20px_rgba(220,38,38,0.35)]">
+                    <div className="relative rounded-[15px] md:rounded-[22px] bg-[#141414]/95 backdrop-blur-sm border border-white/[0.08] px-8 py-10 md:px-12 md:py-14 overflow-hidden">
+                      <div className="absolute top-0 left-8 right-8 md:left-12 md:right-12 h-px bg-gradient-to-r from-transparent via-[#DC2626]/60 to-transparent" aria-hidden />
+                      <p className="text-base md:text-lg text-white/70 leading-relaxed max-w-3xl mx-auto lg:mx-0 text-center lg:text-left pt-2">
+                        College Board&apos;un gerçek Bluebook dijital sınav arayüzüne benzeyen bir ortamda AP&apos;ye hazırlan. Yirmi dört derste deneme, PDF&apos;den otomatik soru çıkarma, topluluk testleri ve yapay zekâ ile puanlama — hangi konuda eksik kaldığını anında gör. Tamamen eğitim amaçlı; dünyadaki öğrenciler için ücretsiz.
+                      </p>
+                      <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4">
+                        <a
+                          href="https://apbluebookonline.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-[#DC2626] text-white font-bold rounded-full hover:bg-[#B91C1C] transition-all duration-300 hover:scale-[1.02] uppercase tracking-wider text-sm shadow-lg shadow-[#DC2626]/25"
+                          style={{ fontFamily: 'var(--font-oswald)', fontWeight: 600 }}
+                        >
+                          Siteye git
+                          <span className="inline-block transition-transform group-hover:translate-x-1" aria-hidden>
+                            →
+                          </span>
+                        </a>
+                        <span className="text-white/35 text-xs uppercase tracking-widest">apbluebookonline.com</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap justify-center lg:justify-start gap-3 md:gap-4">
+                    {['24 AP dersi', 'AI puanlama', 'PDF yükle', 'Topluluk testleri'].map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-xs md:text-sm text-white/55 uppercase tracking-wider"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#1A1A1A] to-transparent pointer-events-none" />
+        </section>
+
         {/* Featured Products Section - Layered Design */}
         <section id="games" className="relative bg-[#1A1A1A] py-24 overflow-hidden">
           {/* Curved Top Transition */}
-          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-[#0A0A0A] to-[#1A1A1A]"></div>
+          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-[#0C0C0C] to-[#1A1A1A]"></div>
           
           <div className="container mx-auto px-6 relative z-10">
             {/* Overlapping Title */}
