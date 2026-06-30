@@ -6,6 +6,11 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import PhotoGallery from './PhotoGallery';
 
+function photoUrl(collectionName: string, fileName: string) {
+  const base = '/Koleksiyonlar(Site)';
+  return `${base}/${encodeURIComponent(collectionName)}/${encodeURIComponent(fileName)}`;
+}
+
 async function getPhotos(koleksiyonName: string) {
   try {
     const koleksiyonlarPath = join(process.cwd(), 'public', 'Koleksiyonlar(Site)');
@@ -22,7 +27,7 @@ async function getPhotos(koleksiyonName: string) {
       })
       .map(file => ({
         name: file,
-        url: `/Koleksiyonlar(Site)/${koleksiyonName}/${file}`
+        url: photoUrl(koleksiyonName, file)
       }));
     
     return photos;

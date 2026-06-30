@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface Photo {
   name: string;
@@ -40,34 +41,40 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             onClick={() => openModal(index)}
           >
             <div className="relative w-full h-64 overflow-hidden">
-              <img 
+              <Image 
                 src={photo.url} 
                 alt={photo.name} 
-                className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" 
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                quality={90}
+                className="object-cover object-center group-hover:scale-110 transition-transform duration-500" 
               />
             </div>
           </div>
         ))}
       </div>
 
-      {/* Modal */}
       {selectedPhoto !== null && (
         <div 
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 cursor-pointer"
           onClick={closeModal}
         >
           <div 
-            className="relative max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center"
+            className="relative w-full max-w-7xl h-[90vh] flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <img 
+            <Image 
               src={photos[selectedPhoto].url} 
               alt={photos[selectedPhoto].name} 
-              className="max-w-full max-h-full object-contain rounded-lg"
+              fill
+              sizes="100vw"
+              quality={95}
+              priority
+              className="object-contain rounded-lg"
             />
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 text-white hover:text-[#DC2626] transition-colors text-4xl font-bold bg-black/50 rounded-full w-12 h-12 flex items-center justify-center"
+              className="absolute top-4 right-4 text-white hover:text-[#DC2626] transition-colors text-4xl font-bold bg-black/50 rounded-full w-12 h-12 flex items-center justify-center z-10"
               aria-label="Kapat"
             >
               ×

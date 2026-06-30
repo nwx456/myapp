@@ -12,6 +12,14 @@ const nextConfig: NextConfig = {
         hostname: 'drive.google.com',
       },
     ],
+    localPatterns: [
+      {
+        pathname: '/Koleksiyonlar(Site)/**',
+      },
+      {
+        pathname: '/images/**',
+      },
+    ],
   },
 };
 

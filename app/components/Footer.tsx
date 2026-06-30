@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="bg-[#1A1A1A] text-white border-t border-white/10">
-      <div className="container mx-auto px-6 py-12">
+      <div className="container mx-auto px-4 sm:px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="text-lg font-bold mb-3" style={{ fontFamily: 'var(--font-caveat)', fontWeight: 700 }}>

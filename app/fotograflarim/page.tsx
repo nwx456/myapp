@@ -1,8 +1,14 @@
 import { readdir } from 'fs/promises';
 import { join } from 'path';
+import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+
+function photoUrl(collectionName: string, fileName: string) {
+  const base = '/Koleksiyonlar(Site)';
+  return `${base}/${encodeURIComponent(collectionName)}/${encodeURIComponent(fileName)}`;
+}
 
 async function getCollections() {
   try {
@@ -35,7 +41,7 @@ async function getCollections() {
             name: item.name,
             slug: encodeURIComponent(item.name),
             photoCount,
-            coverImage: firstPhoto ? `/Koleksiyonlar(Site)/${item.name}/${firstPhoto}` : null
+            coverImage: firstPhoto ? photoUrl(item.name, firstPhoto) : null
           };
         })
     );
@@ -72,10 +78,13 @@ export default async function Fotograflarim() {
               >
                 <div className="relative w-full h-64 overflow-hidden">
                   {collection.coverImage ? (
-                    <img 
+                    <Image 
                       src={collection.coverImage} 
                       alt={collection.name} 
-                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" 
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      quality={90}
+                      className="object-cover object-center group-hover:scale-110 transition-transform duration-500" 
                     />
                   ) : (
                     <div className="w-full h-full bg-[#1A1A1A] flex items-center justify-center">
