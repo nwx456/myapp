@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 
 interface Photo {
   name: string;
@@ -41,13 +40,11 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             onClick={() => openModal(index)}
           >
             <div className="relative w-full h-64 overflow-hidden">
-              <Image 
+              <img 
                 src={photo.url} 
                 alt={photo.name} 
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                quality={90}
-                className="object-cover object-center group-hover:scale-110 transition-transform duration-500" 
+                loading="lazy"
+                className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" 
               />
             </div>
           </div>
@@ -60,17 +57,13 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
           onClick={closeModal}
         >
           <div 
-            className="relative w-full max-w-7xl h-[90vh] flex items-center justify-center"
+            className="relative max-w-7xl max-h-[90vh] w-full flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image 
+            <img 
               src={photos[selectedPhoto].url} 
               alt={photos[selectedPhoto].name} 
-              fill
-              sizes="100vw"
-              quality={95}
-              priority
-              className="object-contain rounded-lg"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg"
             />
             <button
               onClick={closeModal}

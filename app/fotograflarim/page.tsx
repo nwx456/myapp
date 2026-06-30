@@ -1,6 +1,5 @@
 import { readdir } from 'fs/promises';
 import { join } from 'path';
-import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
@@ -78,13 +77,11 @@ export default async function Fotograflarim() {
               >
                 <div className="relative w-full h-64 overflow-hidden">
                   {collection.coverImage ? (
-                    <Image 
+                    <img 
                       src={collection.coverImage} 
                       alt={collection.name} 
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      quality={90}
-                      className="object-cover object-center group-hover:scale-110 transition-transform duration-500" 
+                      loading="lazy"
+                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500" 
                     />
                   ) : (
                     <div className="w-full h-full bg-[#1A1A1A] flex items-center justify-center">
@@ -106,7 +103,7 @@ export default async function Fotograflarim() {
         ) : (
           <div className="text-center py-20">
             <p className="text-white/60 text-lg">Henüz koleksiyon eklenmemiş.</p>
-            <p className="text-white/40 text-sm mt-2">public/Koleksiyonlar/ klasörüne klasörler ekleyin</p>
+            <p className="text-white/40 text-sm mt-2">public/Koleksiyonlar(Site)/ klasörüne koleksiyon klasörleri ekleyin</p>
           </div>
         )}
       </main>
